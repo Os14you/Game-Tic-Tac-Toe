@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 	int n;
-    cout<<"Enter board dimantion :\t";   cin>>n;
+    cout<<"Enter board dimensions :\t";   cin>>n;
     int board[9][9]={0}; // 0 = empty , 1 = x , 2 = o
     int row_num[20],col_num[20],increase_row[20],increase_col[20];
     int verify=0;
@@ -31,11 +31,11 @@ int main(){
             cout<<"Tie !";
             break;
         }
-        char sympol = 'x';
+        char symbol = 'x';
         if(turn){
-            sympol='o';
+            symbol='o';
         }
-        cout<<"Player "<<sympol<<" turn . Enter empty location :"<<endl;
+        cout<<"Player "<<symbol<<" turn . Enter empty location :"<<endl;
         int r,c;
         cin>>r>>c;
         r-=1,c-=1;
@@ -65,7 +65,7 @@ int main(){
             for(int steps=0;steps<n; steps++ , r+=ic_r , c+=ic_c)
                 cnt += (first == board[r][c]);
             if(cnt == n){
-                cout<<"Player "<<sympol<<" won !!"<<endl;
+                cout<<"Player "<<symbol<<" won !!"<<endl;
                 return 0;
             } 
         }
